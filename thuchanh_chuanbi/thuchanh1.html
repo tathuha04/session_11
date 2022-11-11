@@ -19,27 +19,34 @@
 
     <body>
         <script>
-            var year = parseInt(prompt("Nhập năm"));
-            var isLeapYear = false;
+            // let year = parseInt(prompt("Nhập năm"));
+            // let isLeapYear = false;
 
-            var isDivisibleBy4 = year % 4 == 0;
-            if (isDivisibleBy4) {
-                var isDivisibleBy100 = year % 100 == 0;
-                 if (isDivisibleBy100) {
-                    var isDivisibleBy400 = year % 400 == 0;
-                    if (isDivisibleBy400) {
-                        isLeapYear = true;
-                    }
-                } else {
-                    isLeapYear = true;
-                }
-            }
+            // var isDivisibleBy4 = year % 4 == 0;
+            // if (isDivisibleBy4) {
+            //     var isDivisibleBy100 = year % 100 == 0;
+            //      if (isDivisibleBy100) {
+            //         var isDivisibleBy400 = year % 400 == 0;
+            //         if (isDivisibleBy400) {
+            //             isLeapYear = true;
+            //         }
+            //     } else {
+            //         isLeapYear = true;
+            //     }
+            // }
 
-            if (isLeapYear) {
-                alert(year + " là Năm nhuận");
-            } else {
-                alert(year + "Không phải là năm nhuận");
-            }
+            // if (isLeapYear) {
+            //     alert(year + " là Năm nhuận");
+            // } else {
+            //     alert(year + "Không phải là năm nhuận");
+            // }
+
+        let year = parseInt(prompt("nhập năm"));
+        if((year %4 == 0 && year % 100 != 0)||
+        (year % 100 == 0 && year % 400 !=0));
+        alert(year)
+        
+        
 
         </script>
     </body>
