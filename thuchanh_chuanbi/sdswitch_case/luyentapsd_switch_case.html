@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tính số ngày trong một tháng:</h1>
+    <form action="">
+        <input type="text" width="100px" height="30px">
+        <button onclick="">Tính số ngày</button>
+        
+    </form>
+    
+    <script>
+        function result();
+        let a = ("1,2,3,4,5,6,7,8,9,10,11,12");
+        switch(month){
+            case 'a=1':
+            case 'a=3':
+            case 'a=5':
+            case 'a=7':
+            case 'a=8':
+            case 'a=10':
+            case 'a=12':
+              document.getElementById('result').innerHTML("tháng có 31 ngày");
+                break;
+            case 'a=2':
+              document.getElementById('result').innerHTM("tháng có 28 hoặc 29 ngày");
+                break;
+
+            case 'a=4':
+            case 'a=6':
+            case 'a=11':
+              document.getElementById('result').innerHTML("tháng có 30 ngày")
+        }            
+    </script>
+</body>
+
+</html>
