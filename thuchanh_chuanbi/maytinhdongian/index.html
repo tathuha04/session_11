@@ -5,12 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+       table{
+        border: 4px solid;
+        
+       }
+       button{
+        border-radius: 10%;
+       }
+    </style>
+    
 </head>
 <body>
-    <table>
+    <table class="bang">
         <tr>
-           <td colspan="3"><input type="text" id="nhapdulieu"></td>
-           <td><input type="text"></td>
+           <td colspan="4"><input type="text" id="result"></td>
         </tr>
 
         <tr>
@@ -35,11 +44,30 @@
         </tr>
 
         <tr>
-            <td><input class="button" type="button" value="%" onclick="display('%')"></td>
-            <td><input class="button" type="button" value="." onclick="display('.')"></td>
+            <td><input class="button" type="button" value="C" onclick="C()"></td>
+            <td><input class="button" type="button" value="0" onclick="display('0')"></td>
+            <td><input class="button" type="button" value="=" onclick="ketqua()"></td>
             <td><input class="button" type="button" value="/" onclick="display('/')"></td>
-            <td><input class="button" type="button" value="=" onclick="display('=')"></td>
         </tr>
     </table>
+<script>
+    let x = "";
+    function display(number){
+        x += number;
+        document.getElementById("result").value = x;
+    }
+
+    function C(){
+        x = " ";
+        document.getElementById("result").value = x;
+    }
+
+    function ketqua(){
+        document.getElementById("result").value = 
+        eval(document.getElementById("result").value);
+    }
+
+
+</script>
 </body>
 </html>
