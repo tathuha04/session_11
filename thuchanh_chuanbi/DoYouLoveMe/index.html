@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Do you love me?</h1>
+    <input id="yes" type="button" onclick="yessss()" value="Yes">
+    <input style="position: absolute; top: 80px; left:80px " id="no" type="button" onmouseover="noooo()" value="No">
+
+</body>
+
+<script>
+function yessss(){
+    document.write("i luv u too<3")
+}
+function noooo(){
+    let a = Math.round(Math.random() * window.innerWidth);
+    let b = Math.round(Math.random() * window.innerHeight);
+    document.getElementById("no").style.left = a + 'px';
+    document.getElementById("no").style.top = b + 'px';
+
+}
+</script>
+</html>
