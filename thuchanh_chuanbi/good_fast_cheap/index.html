@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            display: inline-block;
+            min-width: 50px;
+        }
+        #good{
+            width: 25px;
+        }
+        #fast{
+            width: 25px;
+        }
+        #cheap{
+            width: 25px;
+        }
+    </style>
+</head>
+<body>
+    <label for="">Good</label>
+    <input type="range" id="good"  max="1" onclick="changegood()"> <br>
+
+    <label for="">Fast</label>
+    <input type="range" id="fast"  max="1" onclick="changefast()"> <br>
+
+    <label for="">Cheap</label>
+    <input type="range" id="cheap" max="1" onclick="changecheap()"> <br>
+
+    <script>
+    let good = false;
+    let fast = false;
+    let cheap = false;
+
+    function changegood() {
+        good = !good;
+        if (good) {
+            document.getElementById("good").value = 2;
+            if (fast && cheap) {
+                document.getElementById("fast").value = 0;
+                fast = false;
+            }
+        } else {
+            document.getElementById("good").value = 0;
+        }
+    }
+
+
+    function changefast() {
+        fast = !fast;
+        if (fast) {
+            document.getElementById("fast").value = 2;
+            if (good && cheap) {
+                document.getElementById("cheap").value = 0;
+                cheap = false;
+            }
+        } else {
+            document.getElementById("fast").value = 0;
+        }
+    }
+
+
+    function changecheap() {
+        cheap = !cheap;
+        if (cheap) {
+            document.getElementById("cheap").value = 2;
+            if (fast && good) {
+                document.getElementById("good").value = 0;
+                good = false;
+            }
+        } else {
+            document.getElementById("cheap").value = 0;
+        }
+    }
+    </script>
+    
+
+</body>
+</html>
