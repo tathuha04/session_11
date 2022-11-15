@@ -5,19 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Title</title>
 </head>
 
 <body>
-    <img id="anh1" src="images/patrick.png" height="100px" width="200px" onclick="latanh1()">
+    <img id="anh1" src="images/101.jpg" height="100px" width="300px" onclick="latanh1()"
+    style="box-shadow: blue 4px 4px 9px">
     <br>
-    <img id="anh2" src="images/spongebob.png" height="100px" width="200px" onclick="latanh1()">
+    <img id="anh2" src="images/202.jpg" height="100px" width="300px" onclick="latanh2()"
+    style="box-shadow: blue 4px 4px 9px">
     <br>
-    <img id="anh3" src="images/squidward.png" height="100px" width="200px" onclick="latanh1()">
+    <img id="anh3" src="images/302.jpg" height="100px" width="300px" onclick="latanh3()"
+    style="box-shadow: blue 4px 4px 9px">
     <script>
         let count1 = 0;
-        let count2 = 2;
-        let count3 = 1;
+        let count2 = 1;
+        let count3 = 2;
         let img1 = document.getElementById('anh1');
         let img2 = document.getElementById('anh2');
         let img3 = document.getElementById('anh3');
@@ -25,22 +28,72 @@
         function latanh1() {
             count1++;
             if (count1 == 1) {
-                img1.scr = 'images/patrick.png';
+                img1.src = 'images/101.jpg';
             }
             else if (count1 == 2) {
-                img1.scr = 'images/spongbob.png'}
+                img1.src = 'images/201.jpg';
+            }
             else {
-                    count1 = 0;
-                    img1.scr = 'images/squidward'
+                count1 = 0;
+                img1.src = 'images/301.jpg'
+            }
+
+            console.log('count1 trong ham 1--', count1)
+            checkShadow()
+        }
+        function latanh2() {
+             count2++;
+            if (count2 == 1) {
+                img2.src = 'images/102.jpg';
+            }
+            else if (count2 == 2) {
+                img2.src = 'images/202.jpg';
+            }
+            else {
+                count2 = 0;
+                img2.src = 'images/302.jpg'
+            }
+
+            console.log('count2 trong ham 2 --', count2)
+            checkShadow()
+
+        }
+        function latanh3() {
+                count3++;
+                if (count3 == 1) {
+                    img3.src = 'images/103.jpg';
+                }
+                else if (count3 == 2) {
+                    img3.src = 'images/203.jpg';
+                }
+                else {
+                    count3 = 0;
+                    img3.src = 'images/303.jpg'
                 }
 
-                console.log('count1', count1)
-            checkShadow()
+                console.log('count1 3--', count3)
+                checkShadow()
+
             }
 
 
-        
-        
+        function checkShadow() {
+            console.log('count1 = ', count1)
+            console.log('count2 = ', count2)
+            console.log('count3 = ', count3)
+
+            if (count1 == count2 && count2 == count3) {
+                console.log('vaodaykhong')
+                img1.style.boxShadow = 'blue 4px 4px 9px';
+                img2.style.boxShadow = 'blue 4px 4px 9px';
+                img3.style.boxShadow = 'blue 4px 4px 9px';
+            }
+            else {
+                img1.style.boxShadow = 'green 4px 4px 9px';
+                img2.style.boxShadow = 'green 4px 4px 9px';
+                img3.style.boxShadow = 'green 4px 4px 9px';
+            }
+        }
     </script>
 </body>
 
